@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Midterm Prep · IT Grade 8</title>
+<meta name="description" content="Midterm exam preparation for Grade 8 IT: number systems, text, images, sound, data storage and Boolean logic with interactive tools and a timed mock exam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--BODY-START-->
+<div class="topbar">
+  <button class="small" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰ Menu</button>
+  <span class="title">Midterm Prep · IT 8</span>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <a class="brand" href="#home">
+      <span class="brand-mark">0101</span>
+      <span class="brand-text">Midterm Prep<small>IT · Grade 8 · Fall 2026</small></span>
+    </a>
+    <nav class="nav" aria-label="Topics">
+      <a href="#home" data-r="home">Start here</a>
+      <div class="nav-label">Learn</div>
+      <a href="#numbers" data-r="numbers">Number systems <span class="tag">DR.01–02</span></a>
+      <a href="#text" data-r="text">Text <span class="tag">DR.03</span></a>
+      <a href="#images" data-r="images">Images <span class="tag">DR.04–05</span></a>
+      <a href="#sound" data-r="sound">Sound <span class="tag">DR.06–07</span></a>
+      <a href="#storage" data-r="storage">Data storage <span class="tag">DR.08–09</span></a>
+      <a href="#logic" data-r="logic">Boolean logic <span class="tag">BL.01–05</span></a>
+      <div class="nav-label">Practise</div>
+      <a href="#practice" data-r="practice">Practice bank</a>
+      <a href="#mock" data-r="mock">Mock exam · 40 min</a>
+      <div class="nav-label">Revise</div>
+      <a href="#sheet" data-r="sheet">Cheat sheet</a>
+      <a href="#glossary" data-r="glossary">Glossary EN → RU</a>
+    </nav>
+    <div class="rail-foot">
+      <button class="small ghost theme-btn" id="themeBtn">Theme: auto</button>
+      <span>Teacher: Maksat Nazarbek<br>Quantum STEM School</span>
+    </div>
+  </aside>
+
+  <main id="main">
+
+<!-- =============================== HOME =============================== -->
+<section class="page" id="p-home" data-route="home">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Fall semester · 2026–2027</div>
+      <h1>Get ready for the <span>IT midterm</span>.</h1>
+      <p class="lede">Everything we studied in Unit 1 and Unit 2 in one place: short theory, worked examples, tools you can play with, practice from our formative and summative tasks, and a timed mock exam.</p>
+      <div class="byte-banner" id="homeByte" aria-label="Click the bits"></div>
+      <p class="small muted" id="homeByteOut">Click the bits. This byte = 0 in denary.</p>
+    </div>
+    <div class="exam-card">
+      <h3>What is in the exam</h3>
+      <table class="t">
+        <thead><tr><th class="l">Section</th><th>Marks</th><th>≈ Time</th></tr></thead>
+        <tbody>
+          <tr><td class="l">A. Number systems</td><td>9</td><td>9 min</td></tr>
+          <tr><td class="l">B. Text, images, sound</td><td>15</td><td>14 min</td></tr>
+          <tr><td class="l">C. Data storage</td><td>3</td><td>3 min</td></tr>
+          <tr><td class="l">D. Boolean logic</td><td>13</td><td>12 min</td></tr>
+          <tr><th class="l">Total · 10 questions</th><th>40</th><th>40 min</th></tr>
+        </tbody>
+      </table>
+      <p class="small muted">About 1 minute per mark. Show your working in calculations — it gives you marks even if the final answer is wrong.</p>
+    </div>
+  </div>
+
+  <h2>Topics</h2>
+  <p class="muted">Tick the “I can…” list inside each topic. Your progress is saved in this browser.</p>
+  <div class="grid2" id="topicCards" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))"></div>
+
+```html
+<h2>Revision Checklist</h2>
+<div class="plan">
+  <div class="day">
+    <h4>Numbers & Data Storage</h4>
+    <ul>
+      <li>Review <a href="#numbers">Number systems</a> and <a href="#storage">Data storage</a>.</li>
+      <li>Practise 15 number conversions and aim for 12 correct answers in a row.</li>
+      <li>Memorise the hexadecimal table (0–F).</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <h4>Text, Images & Sound</h4>
+    <ul>
+      <li>Practise using the pixel editor and sound sampler.</li>
+      <li>Solve 3 image and 3 sound file-size questions, showing your full working.</li>
+      <li>Review the key definitions in the <a href="#glossary">glossary</a>.</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <h4>Logic & Exam Practice</h4>
+    <ul>
+      <li>Build 3 circuits in the Expression Lab and check the truth tables.</li>
+      <li>Complete the <a href="#mock">mock exam</a> under timed conditions.</li>
+      <li>Review your mistakes and practise your weakest topics.</li>
+    </ul>
+  </div>
+</div>
+
+  <h2>How to use this site</h2>
+  <div class="grid2">
+    <div class="panel"><h4>Learn</h4><p class="small">Each topic page has short theory, worked examples like in our slides, and an <b>exam tip</b>. Tools marked <span class="tool-kind">Try it</span> let you see the idea working.</p></div>
+    <div class="panel"><h4>Practise</h4><p class="small">The <a href="#practice">practice bank</a> has tasks in the style of our FA and SA papers. Try first, then open “Show answer”. Drills give a new question every time.</p></div>
+  </div>
+</section>
+
+<!-- =============================== NUMBERS =============================== -->
+<section class="page" id="p-numbers" data-route="numbers" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Data representation <span class="obj">8.DR.01 · 8.DR.02</span></div>
+    <h1>Number systems</h1>
+    <p class="lede">Denary (base 10), binary (base 2), hexadecimal (base 16) and octal (base 8). How to convert between them, and why programmers like hex.</p>
+  </div>
+
+  <h2>Why binary?</h2>
+  <p>A computer is made of millions of tiny switches. Each switch is either <b>off (0)</b> or <b>on (1)</b>. That is why all data — numbers, text, pictures, sound — must be turned into binary before a computer can process it. One binary digit is a <b>bit</b>.</p>
+
+  <div class="panel tool" id="tool-bits">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Byte switchboard</h3></div>
+    <p class="small muted">Turn the switches on and off. Watch the value change in every number system.</p>
+    <div class="bits" id="bitRow"></div>
+    <div class="readouts">
+      <div class="readout"><span>Binary</span><b id="rbBin">00000000</b></div>
+      <div class="readout"><span>Denary</span><b id="rbDen">0</b></div>
+      <div class="readout"><span>Hexadecimal</span><b id="rbHex">00</b></div>
+      <div class="readout"><span>Octal</span><b id="rbOct">0</b></div>
+    </div>
+    <div class="row" style="margin-top:10px"><button class="small" id="bitsClear">All off</button><button class="small" id="bitsFill">All on</button><button class="small" id="bitsRand">Random</button><button class="small" id="bitsShift">Shift left ×2</button></div>
+  </div>
+
+  <h2>Place values</h2>
+  <p>In every number system, each column is worth the base multiplied by the column on its right.</p>
+  <div class="scroll"><table class="t mono">
+    <tr><th class="l">Denary (base 10)</th><td>10³ = 1000</td><td>10² = 100</td><td>10¹ = 10</td><td>10⁰ = 1</td></tr>
+    <tr><th class="l">Binary (base 2)</th><td>2³ = 8</td><td>2² = 4</td><td>2¹ = 2</td><td>2⁰ = 1</td></tr>
+    <tr><th class="l">Octal (base 8)</th><td>8³ = 512</td><td>8² = 64</td><td>8¹ = 8</td><td>8⁰ = 1</td></tr>
+    <tr><th class="l">Hexadecimal (base 16)</th><td>16³ = 4096</td><td>16² = 256</td><td>16¹ = 16</td><td>16⁰ = 1</td></tr>
+  </table></div>
+  <p>For one byte (8 bits) the binary place values are <code>128 64 32 16 8 4 2 1</code>. Learn this row by heart.</p>
+
+  <div class="easy">
+    <div class="easy-head"><span class="pill led">Easy way</span><h2>Three rules for every number system</h2></div>
+    <p>This is the method from our lesson on 2 September. You only need <b>three rules</b>, and they work the same way for base 2, 8 and 16. If the other methods below feel hard, start here.</p>
+
+    <div class="grid3 easy-rules">
+      <div class="panel"><h4><span class="rule-n">Rule 1</span>Denary → any base</h4><p class="small">Divide by the base in a <b>ladder</b> until the answer is smaller than the base. Read the <b>last answer</b>, then the <b>remainders going up</b>.</p></div>
+      <div class="panel"><h4><span class="rule-n">Rule 2</span>Any base → denary</h4><p class="small">Number the digits <b>from the right, starting at 0</b>. Multiply each digit by base<sup>number</sup> and add everything.</p></div>
+      <div class="panel"><h4><span class="rule-n">Rule 3</span>Octal / hex ↔ binary</h4><p class="small">Use the table. Each <b>octal</b> digit = <b>3</b> bits. Each <b>hex</b> digit = <b>4</b> bits.</p></div>
+    </div>
+
+    <h3>Rule 1 · The division ladder</h3>
+    <p>Write the number and the base next to it. Write the answer under the base, then divide that answer again. Each step moves one place to the right, like stairs. Stop when the answer is smaller than the base.</p>
+    <div class="grid2">
+      <div class="example"><b>23 → binary</b><div class="ladder-box" data-ladder="23,2"></div></div>
+      <div class="example"><b>137 → octal</b><div class="ladder-box" data-ladder="137,8"></div></div>
+    </div>
+    <div class="example"><b>558 → hexadecimal</b><div class="ladder-box" data-ladder="558,16"></div><p class="small">The remainder 14 is written as <b>E</b> in hex.</p></div>
+    <div class="tip"><b>How to read the answer:</b> start with the circled number at the bottom of the stairs (the last answer), then read the circled remainders going <b>up and to the left</b>.</div>
+
+    <h3>Rule 2 · Number the positions</h3>
+    <p>Write a small number above each digit: 0 for the right-most digit, then 1, 2, 3… to the left. This number is the power of the base.</p>
+    <div class="example"><b>10110₂ → denary</b><div class="pos-box" data-pos="10110,2"></div></div>
+    <div class="example"><b>721₈ → denary</b><div class="pos-box" data-pos="721,8"></div></div>
+    <div class="example"><b>3FA₁₆ → denary</b><div class="pos-box" data-pos="3FA,16"></div><p class="small">Remember: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.</p></div>
+
+    <h3>Rule 3 · One table for everything</h3>
+    <p>This table shows the numbers 0–15 in all four systems. For <b>octal</b> use only the last 3 bits (rows 0–7). For <b>hex</b> use all 4 bits.</p>
+    <div class="scroll"><table class="t mono uni-table" id="uniTable"></table></div>
+    <div class="grid2">
+      <div class="example"><b>Octal → binary · 714₈</b> 7 → 111, 1 → 001, 4 → 100 → <b>111 001 100₂</b></div>
+      <div class="example"><b>Hex → binary · A63D₁₆</b> A → 1010, 6 → 0110, 3 → 0011, D → 1101 → <b>1010 0110 0011 1101₂</b></div>
+      <div class="example"><b>Binary → octal · 10010100₂</b> Groups of 3 from the right: 010 | 010 | 100 → <b>224₈</b></div>
+      <div class="example"><b>Binary → hex · 110110₂</b> Groups of 4 from the right: 0011 | 0110 → <b>36₁₆</b></div>
+    </div>
+    <div class="tip"><b>Octal ↔ hex?</b> Go through binary: 427₈ → 100 010 111 → 1 0001 0111 → <b>117₁₆</b>.</div>
+
+    <div class="panel tool" id="tool-easy">
+      <div class="tool-head"><span class="tool-kind">Try it</span><h3>Easy-way calculator</h3></div>
+      <p class="small muted">Type a number. The tool draws the ladder or the numbered positions for you, exactly as you write them in your notebook.</p>
+      <div class="row">
+        <div class="field"><label for="ezMode">I want to convert</label><select id="ezMode"><option value="to">from denary to another base (Rule 1)</option><option value="from">from another base to denary (Rule 2)</option></select></div>
+        <div class="field"><label for="ezIn">Number</label><input id="ezIn" class="mono" type="text" value="230" autocomplete="off" style="width:150px"></div>
+        <div class="field"><label for="ezBase">Base</label><select id="ezBase"><option value="2">2 (binary)</option><option value="8">8 (octal)</option><option value="16" selected>16 (hex)</option></select></div>
+      </div>
+      <div id="ezOut" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <h2>Other methods</h2>
+  <p class="muted">These methods give the same answers. Use whichever you find easier.</p>
+
+  <h2>Binary → denary</h2>
+  <p>Write the place values above the bits. Add the place values where there is a <b>1</b>.</p>
+  <div class="example"><b>Example · 1011</b>
+    <div class="scroll"><table class="t mono"><tr><th>8</th><th>4</th><th>2</th><th>1</th></tr><tr><td>1</td><td>0</td><td>1</td><td>1</td></tr></table></div>
+    (1×8) + (0×4) + (1×2) + (1×1) = <b>11</b></div>
+  <div class="example"><b>Example · 11100101</b>
+    128 + 64 + 32 + 4 + 1 = <b>229</b></div>
+
+  <h2>Denary → binary</h2>
+  <h3>Method 1 · Subtract place values</h3>
+  <p>Start from the biggest place value that fits. Put 1 and subtract. If it does not fit, put 0.</p>
+  <div class="example"><b>Example · 42</b>
+    42 − 32 = 10 → 10 − 8 = 2 → 2 − 2 = 0.<br>
+    <span class="mono">32 16 8 4 2 1</span> → <span class="mono">1 0 1 0 1 0</span> → <b>101010</b> (8-bit: <b>00101010</b>)</div>
+  <h3>Method 2 · Divide by 2</h3>
+  <p>Divide by 2 again and again. Write down each remainder. Read the remainders <b>from bottom to top</b>.</p>
+  <div class="example"><b>Example · 39</b>
+    <div class="scroll"><table class="t mono"><tr><th>÷ 2</th><th>Result</th><th>Remainder</th></tr>
+    <tr><td>39</td><td>19</td><td>1</td></tr><tr><td>19</td><td>9</td><td>1</td></tr><tr><td>9</td><td>4</td><td>1</td></tr><tr><td>4</td><td>2</td><td>0</td></tr><tr><td>2</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>1</td></tr></table></div>
+    Read up: <b>100111</b></div>
+  <div class="exam-tip">If the question says “8-bit binary”, add zeros on the left so you have exactly 8 digits: 100111 → 00100111.</div>
+
+  <h2>Hexadecimal</h2>
+  <p>Hex is base 16, so it needs 16 digits: <code>0–9</code> and then <code>A=10, B=11, C=12, D=13, E=14, F=15</code>. Because 16 = 2⁴, <b>one hex digit is exactly 4 bits</b> (a nibble).</p>
+  <div class="nibble-map" id="nibbleMap"></div>
+
+  <h3>Binary → hex</h3>
+  <p>Split the bits into groups of 4 <b>from the right</b>. Add zeros on the left of the last group if needed. Change each group into one hex digit.</p>
+  <div class="example"><b>Example · 101111100001</b>
+    <span class="mono">1011 | 1110 | 0001</span> → <span class="mono">B | E | 1</span> → <b>BE1</b></div>
+  <div class="example"><b>Example · 10000111111101</b>
+    <span class="mono">0010 | 0001 | 1111 | 1101</span> → <b>21FD</b></div>
+
+  <h3>Hex → binary</h3>
+  <p>Change each hex digit into 4 bits.</p>
+  <div class="example"><b>Example · F935</b> F = 1111, 9 = 1001, 3 = 0011, 5 = 0101 → <b>1111 1001 0011 0101</b></div>
+
+  <h3>Hex → denary</h3>
+  <p>Multiply each digit by its place value (256, 16, 1) and add.</p>
+  <div class="example"><b>Example · 45A</b> (4×256) + (5×16) + (10×1) = 1024 + 80 + 10 = <b>1114</b></div>
+
+  <h3>Denary → hex</h3>
+  <p>Divide by 16 again and again. Change remainders 10–15 into A–F. Read from bottom to top.</p>
+  <div class="example"><b>Example · 2004</b>
+    2004 ÷ 16 = 125 r <b>4</b> · 125 ÷ 16 = 7 r <b>13 (D)</b> · 7 ÷ 16 = 0 r <b>7</b> → <b>7D4</b></div>
+  <div class="tip"><b>Shortcut for numbers up to 255:</b> divide by 16 once. The whole part is the first digit, the remainder is the second. 200 ÷ 16 = 12 r 8 → C8.</div>
+
+  <h3>Octal (base 8)</h3>
+  <p>Octal uses digits 0–7. Because 8 = 2³, <b>one octal digit is exactly 3 bits</b>. Group bits in threes from the right.</p>
+  <div class="example"><b>Example · 714₈ → binary</b> 7 = 111, 1 = 001, 4 = 100 → <b>111001100</b></div>
+  <div class="example"><b>Example · 117₈ → denary</b> (1×64) + (1×8) + (7×1) = <b>79</b></div>
+
+  <div class="panel tool" id="tool-conv">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Step-by-step converter</h3></div>
+    <p class="small muted">Type any number and choose the bases. You will see every step, like in your notebook.</p>
+    <div class="row">
+      <div class="field"><label for="cvIn">Number</label><input id="cvIn" class="mono" type="text" value="173" autocomplete="off"></div>
+      <div class="field"><label for="cvFrom">From</label><select id="cvFrom"><option value="10" selected>Denary (10)</option><option value="2">Binary (2)</option><option value="16">Hex (16)</option><option value="8">Octal (8)</option></select></div>
+      <div class="field"><label for="cvTo">To</label><select id="cvTo"><option value="2" selected>Binary (2)</option><option value="10">Denary (10)</option><option value="16">Hex (16)</option><option value="8">Octal (8)</option></select></div>
+    </div>
+    <div id="cvOut" style="margin-top:12px"></div>
+  </div>
+
+  <h2>Why do we use hexadecimal?</h2>
+  <div class="grid3">
+    <div class="panel"><h4>Shorter</h4><p class="small">One hex digit replaces four bits. <code>11010111</code> becomes <code>D7</code>.</p></div>
+    <div class="panel"><h4>Easier to read</h4><p class="small">People can read, remember and copy hex much more easily than long rows of 0s and 1s.</p></div>
+    <div class="panel"><h4>Fewer mistakes</h4><p class="small">Fewer characters mean fewer copying errors. And it is still very easy to change back into binary.</p></div>
+  </div>
+  <h3>Where hex is used</h3>
+  <ul>
+    <li><b>MAC addresses</b> — a unique number for a network card, e.g. <code>00-1C-B3-4F-25-FE</code>. The first 3 pairs identify the manufacturer, the last 3 pairs identify the device.</li>
+    <li><b>HTML colour codes</b> — <code>#RRGGBB</code>, two hex digits each for red, green and blue.</li>
+    <li><b>Error codes and memory addresses</b> — shown in hex so that programmers can find the problem location.</li>
+    <li><b>IPv6 addresses</b> — 128-bit addresses written in hex, e.g. <code>a8fb:7a88:fff0:0fff:3d21:2085:66fb:f0fa</code>.</li>
+  </ul>
+  <div class="panel tool" id="tool-colour">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Hex colour mixer</h3></div>
+    <p class="small muted">Each colour channel is one byte (0–255) = two hex digits. Move the sliders.</p>
+    <div class="grid2">
+      <div>
+        <div class="field"><label for="cR">Red <span class="hexpair" id="cRv"></span></label><input type="range" id="cR" min="0" max="255" value="255"></div>
+        <div class="field"><label for="cG">Green <span class="hexpair" id="cGv"></span></label><input type="range" id="cG" min="0" max="255" value="87"></div>
+        <div class="field"><label for="cB">Blue <span class="hexpair" id="cBv"></span></label><input type="range" id="cB" min="0" max="255" value="51"></div>
+      </div>
+      <div>
+        <div class="swatch" id="cSw"></div>
+        <p class="big-out" id="cHex">#FF5733</p>
+        <p class="small mono muted" id="cBin"></p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Practise</h2>
+  <div class="panel tool" id="drill-num"></div>
+  <div class="panel tool" id="drill-cmp"></div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="numbers">
+    <li><input type="checkbox" id="cn1"><label for="cn1">convert binary ↔ denary (both methods)</label></li>
+    <li><input type="checkbox" id="cn2"><label for="cn2">convert binary ↔ hexadecimal by grouping 4 bits</label></li>
+    <li><input type="checkbox" id="cn3"><label for="cn3">convert hexadecimal ↔ denary</label></li>
+    <li><input type="checkbox" id="cn4"><label for="cn4">convert with octal by grouping 3 bits</label></li>
+    <li><input type="checkbox" id="cn5"><label for="cn5">give 2 reasons why hex is used instead of binary</label></li>
+    <li><input type="checkbox" id="cn6"><label for="cn6">give 2 examples of where hex is used</label></li>
+  </ul>
+</section>
+
+<!-- =============================== TEXT =============================== -->
+<section class="page" id="p-text" data-route="text" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Data representation <span class="obj">8.DR.03</span></div>
+    <h1>Text</h1>
+    <p class="lede">Every character you type — letters, digits, spaces, punctuation — is stored as a binary code. A list of characters and their codes is called a character set.</p>
+  </div>
+  <h2>Character sets</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th class="l">Character set</th><th>Bits per character</th><th>Number of characters</th><th class="l">What it covers</th></tr></thead>
+    <tbody>
+      <tr><td class="l"><b>ASCII</b></td><td>7</td><td>2⁷ = 128</td><td class="l">English letters (26 upper case, 26 lower case), digits, punctuation, space</td></tr>
+      <tr><td class="l"><b>Extended ASCII</b></td><td>8</td><td>2⁸ = 256</td><td class="l">ASCII + 128 more codes for some non-English letters and graphic symbols</td></tr>
+      <tr><td class="l"><b>Unicode</b></td><td>16</td><td>over 65 000</td><td class="l">Characters from almost all languages: Kazakh, Russian, Chinese, Arabic… and emoji</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam-tip">Why Unicode? ASCII has too few codes for other alphabets. Unicode uses more bits, so it can store many more different characters.</div>
+  <div class="example"><b>Useful codes</b>
+    <span class="mono">A = 65 = 01000001</span> · <span class="mono">a = 97 = 01100001</span> · <span class="mono">0 = 48 = 00110000</span> · <span class="mono">space = 32 = 00100000</span><br>
+    Codes are in order, so B = 66, C = 67 … and a lower-case letter is always 32 more than its upper-case letter.</div>
+
+  <div class="panel tool" id="tool-ascii">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Text → binary</h3></div>
+    <p class="small muted">Type a word. Try a Kazakh or Russian letter (Ә, Ж, Қ) — it is not in ASCII and needs Unicode.</p>
+    <div class="field"><label for="asIn">Text</label><input id="asIn" type="text" value="Hi Ә!" maxlength="24" autocomplete="off"></div>
+    <div class="chars" id="asOut"></div>
+    <p class="small" id="asSum"></p>
+  </div>
+
+  <div class="panel tool" id="tool-asciidec">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Binary → text</h3></div>
+    <p class="small muted">Paste 8-bit codes separated by spaces. This is the message from our lesson slide.</p>
+    <textarea id="adIn" class="mono" rows="2" style="width:100%">01001001 00100000 01101100 01101001 01101011 01100101 00100000 01001101 01100011 01000100</textarea>
+    <p class="big-out" id="adOut"></p>
+  </div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="text">
+    <li><input type="checkbox" id="ct1"><label for="ct1">explain what a character set is</label></li>
+    <li><input type="checkbox" id="ct2"><label for="ct2">state bits and number of characters for ASCII, Extended ASCII and Unicode</label></li>
+    <li><input type="checkbox" id="ct3"><label for="ct3">decode a message using a code table</label></li>
+    <li><input type="checkbox" id="ct4"><label for="ct4">explain why Unicode is needed</label></li>
+  </ul>
+</section>
+
+<!-- =============================== IMAGES =============================== -->
+<section class="page" id="p-images" data-route="images" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Data representation <span class="obj">8.DR.04 · 8.DR.05</span></div>
+    <h1>Images</h1>
+    <p class="lede">A bitmap image is a grid of tiny dots called pixels. Each pixel is stored as a binary number that says its colour.</p>
+  </div>
+  <h2>Key words</h2>
+  <div class="grid2">
+    <div class="panel"><h4>Pixel</h4><p class="small">The smallest single dot of colour in an image.</p></div>
+    <div class="panel"><h4>Image resolution</h4><p class="small">The number of pixels that make up an image (width × height). Higher resolution → more detail, but a bigger file.</p></div>
+    <div class="panel"><h4>Colour depth</h4><p class="small">The number of bits used to represent the colour of each pixel. More bits → more colours, but a bigger file.</p></div>
+    <div class="panel"><h4>Number of colours</h4><p class="small"><span class="formula">colours = 2<sup>colour depth</sup></span></p></div>
+  </div>
+  <div class="scroll"><table class="t mono">
+    <tr><th class="l">Colour depth</th><td>1 bit</td><td>2 bits</td><td>3 bits</td><td>4 bits</td><td>8 bits</td><td>24 bits</td></tr>
+    <tr><th class="l">Colours</th><td>2</td><td>4</td><td>8</td><td>16</td><td>256</td><td>16 777 216</td></tr>
+  </table></div>
+  <p>Most modern computers use 24-bit colour: 8 bits each for red, green and blue — over 16 million colours.</p>
+
+  <div class="panel tool" id="tool-pixel">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Pixel editor</h3></div>
+    <p class="small muted">Choose a colour depth, pick a colour, and paint. Every pixel is saved as the binary code of its colour.</p>
+    <div class="row"><label for="pxDepth">Colour depth</label>
+      <select id="pxDepth"><option value="1">1 bit (2 colours)</option><option value="2" selected>2 bits (4 colours)</option><option value="3">3 bits (8 colours)</option></select>
+      <button class="small" id="pxClear">Clear</button><button class="small" id="pxSmile">Load example</button></div>
+    <div class="palette" id="pxPal" style="margin:10px 0"></div>
+    <div class="grid2">
+      <div class="pixgrid" id="pxGrid"></div>
+      <div style="min-width:0"><div class="bincodes" id="pxBin"></div><p class="small" id="pxSize"></p></div>
+    </div>
+  </div>
+
+  <div class="panel tool" id="tool-res">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Resolution and colour depth</h3></div>
+    <p class="small muted">Change the resolution and colour depth of the same picture. Watch the quality and the file size.</p>
+    <div class="grid2">
+      <canvas class="pixel" id="resCv" width="256" height="256"></canvas>
+      <div>
+        <div class="field"><label for="resW">Resolution: <span id="resWv" class="mono"></span></label><input type="range" id="resW" min="0" max="5" value="3"></div>
+        <div class="field"><label for="resD">Colour depth: <span id="resDv" class="mono"></span></label><input type="range" id="resD" min="0" max="7" value="7"></div>
+        <ol class="steps" id="resSteps"></ol>
+      </div>
+    </div>
+  </div>
+
+  <h2>Calculating the file size of an image</h2>
+  <p class="formula">file size (bits) = width × height × colour depth</p>
+  <p>Then: <b>÷ 8</b> → bytes, <b>÷ 1024</b> → KiB, <b>÷ 1024</b> → MiB.</p>
+  <div class="example"><b>Example · 2 × 2 pixels, colour depth 2</b> (2 × 2) × 2 = 8 bits = <b>1 byte</b></div>
+  <div class="example"><b>Example · 640 × 480 pixels, colour depth 8 bits → KiB</b>
+    <ol class="steps"><li>640 × 480 = 307 200 pixels</li><li>307 200 × 8 = 2 457 600 bits</li><li>2 457 600 ÷ 8 = 307 200 bytes</li><li>307 200 ÷ 1024 = <b>300 KiB</b></li></ol></div>
+  <div class="tip"><b>Smart shortcut:</b> if the colour depth is 8 bits, each pixel is exactly 1 byte, so bytes = number of pixels. If it is 16 bits, bytes = pixels × 2. If 24 bits, bytes = pixels × 3.</div>
+
+  <div class="panel tool" id="calc-img"></div>
+  <div class="panel tool" id="drill-img"></div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="images">
+    <li><input type="checkbox" id="ci1"><label for="ci1">define pixel, resolution and colour depth</label></li>
+    <li><input type="checkbox" id="ci2"><label for="ci2">find the number of colours from the colour depth (and back)</label></li>
+    <li><input type="checkbox" id="ci3"><label for="ci3">explain how resolution and colour depth affect quality and file size</label></li>
+    <li><input type="checkbox" id="ci4"><label for="ci4">calculate the file size of an image in bytes, KiB and MiB</label></li>
+  </ul>
+</section>
+
+<!-- =============================== SOUND =============================== -->
+<section class="page" id="p-sound" data-route="sound" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Data representation <span class="obj">8.DR.06 · 8.DR.07</span></div>
+    <h1>Sound</h1>
+    <p class="lede">Real sound is an analogue wave. A computer measures the wave many times every second and stores each measurement as a binary number.</p>
+  </div>
+  <h2>From analogue to digital</h2>
+  <ol>
+    <li>A microphone captures the sound as an analogue signal.</li>
+    <li>Software measures the <b>amplitude</b> (height) of the wave at regular time intervals. Each measurement is a <b>sample</b>.</li>
+    <li>Each sample is stored as a binary number.</li>
+  </ol>
+  <div class="grid2">
+    <div class="panel"><h4>Sample rate</h4><p class="small">The number of samples taken <b>per second</b>. Measured in hertz (Hz). 44 100 Hz = 44 100 samples every second.</p></div>
+    <div class="panel"><h4>Sample resolution</h4><p class="small">The number of bits used to store each sample (also called <b>bit depth</b>). 4 bits → 2⁴ = 16 possible amplitude levels.</p></div>
+  </div>
+
+  <div class="panel tool" id="tool-wave">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Sound sampler</h3></div>
+    <p class="small muted">The grey line is the real sound. The amber dots are the samples. The amber steps are what the computer stores. Press play to hear the difference.</p>
+    <canvas class="wave" id="wvCv" width="900" height="300"></canvas>
+    <div class="grid2" style="margin-top:10px">
+      <div class="field"><label for="wvRate">Sample rate: <span class="mono" id="wvRateV"></span></label><input type="range" id="wvRate" min="0" max="7" value="5"></div>
+      <div class="field"><label for="wvBits">Sample resolution: <span class="mono" id="wvBitsV"></span></label><input type="range" id="wvBits" min="1" max="8" value="3"></div>
+    </div>
+    <div class="row" style="margin-top:8px"><button class="primary small" id="wvPlayO">▶ Play real sound</button><button class="small" id="wvPlayD">▶ Play digital version</button><span class="small muted" id="wvSize"></span></div>
+  </div>
+
+  <h2>Higher sample rate or higher resolution</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th class="l">Advantages</th><th class="l">Disadvantages</th></tr></thead>
+    <tbody><tr><td class="l">Better sound quality, closer to the real sound</td><td class="l">Bigger file size, needs more storage</td></tr>
+    <tr><td class="l">Less distortion</td><td class="l">Takes longer to download / upload</td></tr></tbody>
+  </table></div>
+
+  <h2>Calculating the file size of a sound</h2>
+  <p class="formula">file size (bits) = sample rate × sample resolution × length (seconds) × channels</p>
+  <p><b>Mono</b> = 1 channel. <b>Stereo</b> = 2 channels (left and right), so the file is twice as big. Remember to change minutes into seconds.</p>
+  <div class="example"><b>Example · mono, 44 100 Hz, 8 bits, 20 seconds → KiB</b>
+    <ol class="steps"><li>44 100 × 8 × 20 = 7 056 000 bits</li><li>7 056 000 ÷ 8 = 882 000 bytes</li><li>882 000 ÷ 1024 ≈ <b>861.33 KiB</b></li></ol></div>
+  <div class="example"><b>Example · stereo CD, 44 100 Hz, 16 bits, 60 minutes → MiB</b>
+    <ol class="steps"><li>60 minutes = 3600 seconds</li><li>44 100 × 16 × 3600 × 2 = 5 080 320 000 bits</li><li>÷ 8 = 635 040 000 bytes</li><li>÷ 1024 ÷ 1024 ≈ <b>605.62 MiB</b></li></ol></div>
+
+  <div class="panel tool" id="calc-snd"></div>
+  <div class="panel tool" id="drill-snd"></div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="sound">
+    <li><input type="checkbox" id="cs1"><label for="cs1">explain how sound is sampled</label></li>
+    <li><input type="checkbox" id="cs2"><label for="cs2">define sample rate and sample resolution</label></li>
+    <li><input type="checkbox" id="cs3"><label for="cs3">give an advantage and a disadvantage of higher rate / resolution</label></li>
+    <li><input type="checkbox" id="cs4"><label for="cs4">calculate the file size of mono and stereo sound</label></li>
+  </ul>
+</section>
+
+<!-- =============================== STORAGE =============================== -->
+<section class="page" id="p-storage" data-route="storage" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Data representation <span class="obj">8.DR.08 · 8.DR.09</span></div>
+    <h1>Data storage</h1>
+    <p class="lede">Units of memory size, how to convert between them, and why files are compressed.</p>
+  </div>
+  <h2>Units</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th class="l">Unit</th><th class="l">Equal to</th></tr></thead>
+    <tbody>
+      <tr><td class="l">1 bit</td><td class="l">a single 0 or 1</td></tr>
+      <tr><td class="l">1 nibble</td><td class="l">4 bits</td></tr>
+      <tr><td class="l">1 byte</td><td class="l">8 bits</td></tr>
+      <tr><td class="l">1 kibibyte (KiB)</td><td class="l">1024 bytes</td></tr>
+      <tr><td class="l">1 mebibyte (MiB)</td><td class="l">1024 KiB</td></tr>
+      <tr><td class="l">1 gibibyte (GiB)</td><td class="l">1024 MiB</td></tr>
+      <tr><td class="l">1 tebibyte (TiB)</td><td class="l">1024 GiB</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><b>Rule:</b> going to a <b>bigger</b> unit → divide (÷ 8 from bits to bytes, then ÷ 1024 each step). Going to a <b>smaller</b> unit → multiply.</div>
+  <div class="example"><b>Example · 64 GiB → bytes</b>
+    <ol class="steps"><li>64 × 1024 = 65 536 MiB</li><li>65 536 × 1024 = 67 108 864 KiB</li><li>67 108 864 × 1024 = <b>68 719 476 736 bytes</b></li></ol></div>
+
+  <div class="panel tool" id="tool-units"></div>
+  <div class="panel tool" id="tool-fit"></div>
+
+  <h2>Bonus · Compression</h2>
+  <p>Big files take more storage and more time to send. <b>Compression</b> makes files smaller.</p>
+  <div class="grid2">
+    <div class="panel"><h4>Lossy</h4><p class="small">Removes some data forever (details people hardly notice). Much smaller file. Used for photos (JPEG), music (MP3), video.</p></div>
+    <div class="panel"><h4>Lossless</h4><p class="small">No data is lost — the original file can be rebuilt exactly. Used for text, programs, PNG images. Example: RLE.</p></div>
+  </div>
+  <p><b>Run-length encoding (RLE)</b> replaces a run of the same value with <i>how many</i> + <i>which value</i>. <code>AAAABBBCCD</code> → <code>4A 3B 2C 1D</code>.</p>
+  <div class="panel tool" id="tool-rle"></div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="storage">
+    <li><input type="checkbox" id="cd1"><label for="cd1">put the units bit, nibble, byte, KiB, MiB, GiB, TiB in order</label></li>
+    <li><input type="checkbox" id="cd2"><label for="cd2">convert between units with × / ÷ 1024</label></li>
+    <li><input type="checkbox" id="cd3"><label for="cd3">work out how many files fit on a device</label></li>
+    <li><input type="checkbox" id="cd4"><label for="cd4">explain lossy and lossless compression and RLE</label></li>
+  </ul>
+</section>
+
+<!-- =============================== LOGIC =============================== -->
+<section class="page" id="p-logic" data-route="logic" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Boolean logic <span class="obj">8.BL.01 – 8.BL.05</span></div>
+    <h1>Boolean logic</h1>
+    <p class="lede">Logic gates take inputs of 0 (False) and 1 (True) and give one output. We combine them into circuits to make decisions — like a burglar alarm.</p>
+  </div>
+  <h2>Key words</h2>
+  <div class="scroll"><table class="t">
+    <thead><tr><th class="l">Term</th><th class="l">Meaning</th><th class="l">Example</th></tr></thead>
+    <tbody>
+      <tr><td class="l"><b>Boolean</b></td><td class="l">A type of data with only two values: True or False.</td><td class="l"><code>is_active = True</code></td></tr>
+      <tr><td class="l"><b>Truth value</b></td><td class="l">The actual value of a condition: True (1) or False (0).</td><td class="l">10 &gt; 5 is True</td></tr>
+      <tr><td class="l"><b>Truth table</b></td><td class="l">A table that shows all possible inputs and the output for each one.</td><td class="l">2 inputs → 4 rows</td></tr>
+      <tr><td class="l"><b>Logic gate</b></td><td class="l">A part of a circuit that uses one logic rule to give an output.</td><td class="l">AND needs all inputs = 1</td></tr>
+      <tr><td class="l"><b>Logic circuit</b></td><td class="l">Two or more logic gates joined together.</td><td class="l">An alarm circuit</td></tr>
+      <tr><td class="l"><b>Condition</b></td><td class="l">A test or question with a True/False answer.</td><td class="l">Is the door open?</td></tr>
+      <tr><td class="l"><b>Rule</b></td><td class="l">The action the system takes because of the result of a condition.</td><td class="l">If True, ring the alarm</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>The three gates</h2>
+  <div class="gate-cards" id="gateCards"></div>
+  <div class="exam-tip">Rows of a truth table: 2 inputs → 2² = 4 rows, 3 inputs → 2³ = 8 rows. Always write the inputs in counting order: 000, 001, 010 … 111.</div>
+
+  <h2>Combining gates</h2>
+  <p>The output of one gate can be the input of another. Work from the <b>inputs to the output</b>. Give each middle wire a name (P, Q) and fill in its column first — these are <b>intermediate outputs</b>.</p>
+  <div class="example"><b>Circuit → expression</b> Start at the output gate and write its rule. Put brackets around each gate that feeds into it.<br>
+    AND gate whose inputs are (NOT A) and (B OR C) → <code>X = (NOT A) AND (B OR C)</code></div>
+  <div class="example"><b>Expression → circuit</b> Start with the innermost brackets. Draw those gates first, then join their outputs into the next gate.<br>
+    <code>X = A AND (NOT (B OR C))</code>: draw B OR C → put it through NOT → AND with A.</div>
+
+  <div class="panel tool" id="tool-lab">
+    <div class="tool-head"><span class="tool-kind">Try it</span><h3>Expression lab</h3></div>
+    <p class="small muted">Type any expression with AND, OR, NOT and brackets. You get the circuit and the full truth table with intermediate columns. Click a row to see which wires are on.</p>
+    <div class="row"><input id="labIn" type="text" class="mono" style="flex:1;min-width:0" value="A AND (NOT (B OR C))" autocomplete="off" aria-label="Logic expression"><button class="primary" id="labGo">Build</button></div>
+    <div class="row small" style="margin-top:6px" id="labEx"></div>
+    <p class="fb bad" id="labErr" hidden></p>
+    <div class="circuit-box" id="labSvg" style="margin-top:10px"></div>
+    <div class="scroll" id="labTT"></div>
+  </div>
+
+  <h2>Logic in real life</h2>
+  <p>Read the problem and look for the words <b>and</b>, <b>or</b>, <b>either … or</b>, <b>not</b>. Give each condition a letter.</p>
+  <div class="example"><b>Example · Car alarm</b> The alarm sounds (Y = 1) when the system is on (S = 1) <b>and either</b> a door is opened (D = 1) <b>or</b> a window is broken (W = 1).<br>
+    “either … or” goes in brackets → <code>Y = S AND (D OR W)</code></div>
+  <div class="example"><b>Example · Greenhouse window</b> A window opens (X = 1) when it is hot (T = 1) <b>and</b> it is <b>not</b> raining (R = 1 means raining).<br>
+    → <code>X = T AND (NOT R)</code></div>
+  <div class="panel tool" id="drill-scn"></div>
+  <div class="panel tool" id="drill-tt"></div>
+  <div class="panel tool" id="drill-expr"></div>
+
+  <h2>I can…</h2>
+  <ul class="cando" data-topic="logic">
+    <li><input type="checkbox" id="cl1"><label for="cl1">explain the key terms: Boolean, truth table, logic gate, logic circuit, condition, rule</label></li>
+    <li><input type="checkbox" id="cl2"><label for="cl2">draw AND, OR, NOT and complete their truth tables</label></li>
+    <li><input type="checkbox" id="cl3"><label for="cl3">complete a truth table for a 3-input circuit using intermediate outputs</label></li>
+    <li><input type="checkbox" id="cl4"><label for="cl4">write the expression for a circuit, and draw a circuit for an expression</label></li>
+    <li><input type="checkbox" id="cl5"><label for="cl5">turn a real-life problem into a logic expression and circuit</label></li>
+  </ul>
+</section>
+
+<!-- =============================== PRACTICE =============================== -->
+<section class="page" id="p-practice" data-route="practice" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Practise</div>
+    <h1>Practice bank</h1>
+    <p class="lede">Tasks in the style of our formative (FA) and summative (SA) papers. Try each one in your notebook first, then open the answer.</p>
+  </div>
+  <div class="tabs" id="pbTabs"></div>
+  <div id="pbList"></div>
+</section>
+
+<!-- =============================== MOCK =============================== -->
+<section class="page" id="p-mock" data-route="mock" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Practise · 40 minutes · 40 marks</div>
+    <h1>Mock exam</h1>
+    <p class="lede">Same sections and marks as the real midterm, with new numbers every time. Have a pen and paper for your working.</p>
+  </div>
+  <div id="mockRoot"></div>
+</section>
+
+<!-- =============================== SHEET =============================== -->
+<section class="page" id="p-sheet" data-route="sheet" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Revise</div>
+    <h1>Cheat sheet</h1>
+    <p class="lede">Everything to remember on one page. Copy it into your notebook by hand — that is a good way to learn it.</p>
+  </div>
+  <div class="sheet" style="margin-top:16px">
+    <div class="panel"><h3>Place values</h3>
+      <p class="mono small">Binary: 128 64 32 16 8 4 2 1<br>Octal: 512 64 8 1<br>Hex: 4096 256 16 1</p>
+      <p class="small">Binary → hex: groups of <b>4</b> from the right.<br>Binary → octal: groups of <b>3</b> from the right.<br>Denary → other base: divide, read remainders bottom to top.</p></div>
+    <div class="panel"><h3>Hex digits</h3><div class="nibble-map" id="nibbleMap2"></div></div>
+    <div class="panel"><h3>Why hex? Where?</h3>
+      <p class="small"><b>Why:</b> shorter, easier to read and remember, fewer mistakes, easy to convert to binary.<br><b>Where:</b> MAC addresses, HTML colours (#RRGGBB), error codes / memory addresses, IPv6.</p></div>
+    <div class="panel"><h3>Text</h3>
+      <p class="small">ASCII: 7 bits, 128 characters.<br>Extended ASCII: 8 bits, 256.<br>Unicode: 16 bits, 65 000+, all languages.<br><span class="mono">A = 65, a = 97, space = 32</span></p></div>
+    <div class="panel"><h3>Images</h3>
+      <p class="formula small">bits = width × height × colour depth</p>
+      <p class="small">colours = 2<sup>depth</sup>. Higher resolution or depth → better quality, bigger file.</p></div>
+    <div class="panel"><h3>Sound</h3>
+      <p class="formula small">bits = rate × resolution × seconds × channels</p>
+      <p class="small">Mono = 1, stereo = 2. Sample rate = samples per second (Hz). Resolution = bits per sample.</p></div>
+    <div class="panel"><h3>Units</h3>
+      <p class="small mono">8 bits = 1 byte · 4 bits = 1 nibble<br>1024 B = 1 KiB · 1024 KiB = 1 MiB<br>1024 MiB = 1 GiB · 1024 GiB = 1 TiB</p>
+      <p class="small">Bigger unit → ÷. Smaller unit → ×.</p></div>
+    <div class="panel"><h3>Logic gates</h3>
+      <p class="small"><b>AND</b> = 1 only if all inputs are 1 (A.B)<br><b>OR</b> = 1 if at least one input is 1 (A+B)<br><b>NOT</b> = the opposite, one input (Ā)<br>Rows = 2<sup>inputs</sup></p></div>
+    <div class="panel"><h3>Compression</h3>
+      <p class="small"><b>Lossy</b>: data removed forever, much smaller (JPEG, MP3).<br><b>Lossless</b>: original rebuilt exactly (PNG, text). RLE: AAAABB → 4A 2B.</p></div>
+  </div>
+</section>
+
+<!-- =============================== GLOSSARY =============================== -->
+<section class="page" id="p-glossary" data-route="glossary" hidden>
+  <div class="page-head">
+    <div class="eyebrow">Revise</div>
+    <h1>Glossary</h1>
+    <p class="lede">Key terms in English with a short meaning and the Russian word.</p>
+  </div>
+  <div class="row" style="margin:14px 0"><input id="glQ" class="gloss-search" type="text" placeholder="Search a term…" aria-label="Search the glossary" autocomplete="off"></div>
+  <div class="scroll"><table class="t gloss" id="glT"></table></div>
+</section>
+
+  <p class="footer-note">Made for Grade 8 IT, Quantum STEM School · Midterm preparation, Fall 2026 · Units: 1 KiB = 1024 bytes, as in our lessons.</p>
+  </main>
+</div>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/numbers.js"></script>
+<script src="assets/js/media.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/logic.js"></script>
+<script src="assets/js/practice.js"></script>
+<script src="assets/js/mock.js"></script>
+<!--BODY-END-->
+</body>
+</html>
