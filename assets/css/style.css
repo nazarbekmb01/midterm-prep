@@ -94,7 +94,7 @@ li { margin: .2rem 0; }
 
 .topbar { display: none; }
 main { padding-inline: clamp(16px, 4vw, 48px); padding-block: 28px 80px; min-width: 0; }
-.page { max-width: 900px; }
+.page { max-width: 100%; }
 .page[hidden] { display: none !important; }
 
 @media (max-width: 900px) {
