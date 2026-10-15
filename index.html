@@ -502,21 +502,11 @@
   <div class="panel tool" id="tool-units"></div>
   <div class="panel tool" id="tool-fit"></div>
 
-  <h2>Bonus · Compression</h2>
-  <p>Big files take more storage and more time to send. <b>Compression</b> makes files smaller.</p>
-  <div class="grid2">
-    <div class="panel"><h4>Lossy</h4><p class="small">Removes some data forever (details people hardly notice). Much smaller file. Used for photos (JPEG), music (MP3), video.</p></div>
-    <div class="panel"><h4>Lossless</h4><p class="small">No data is lost — the original file can be rebuilt exactly. Used for text, programs, PNG images. Example: RLE.</p></div>
-  </div>
-  <p><b>Run-length encoding (RLE)</b> replaces a run of the same value with <i>how many</i> + <i>which value</i>. <code>AAAABBBCCD</code> → <code>4A 3B 2C 1D</code>.</p>
-  <div class="panel tool" id="tool-rle"></div>
-
   <h2>I can…</h2>
   <ul class="cando" data-topic="storage">
     <li><input type="checkbox" id="cd1"><label for="cd1">put the units bit, nibble, byte, KiB, MiB, GiB, TiB in order</label></li>
     <li><input type="checkbox" id="cd2"><label for="cd2">convert between units with × / ÷ 1024</label></li>
     <li><input type="checkbox" id="cd3"><label for="cd3">work out how many files fit on a device</label></li>
-    <li><input type="checkbox" id="cd4"><label for="cd4">explain lossy and lossless compression and RLE</label></li>
   </ul>
 </section>
 
@@ -630,8 +620,6 @@
       <p class="small">Bigger unit → ÷. Smaller unit → ×.</p></div>
     <div class="panel"><h3>Logic gates</h3>
       <p class="small"><b>AND</b> = 1 only if all inputs are 1 (A.B)<br><b>OR</b> = 1 if at least one input is 1 (A+B)<br><b>NOT</b> = the opposite, one input (Ā)<br>Rows = 2<sup>inputs</sup></p></div>
-    <div class="panel"><h3>Compression</h3>
-      <p class="small"><b>Lossy</b>: data removed forever, much smaller (JPEG, MP3).<br><b>Lossless</b>: original rebuilt exactly (PNG, text). RLE: AAAABB → 4A 2B.</p></div>
   </div>
 </section>
 
